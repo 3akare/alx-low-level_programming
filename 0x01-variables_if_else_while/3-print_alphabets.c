@@ -16,13 +16,9 @@ int main(void)
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 		putchar(alpha);
-
-
 	for (beta = 'A'; beta <= 'Z'; beta++)
 		putchar(beta);
-
-				
-		putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
