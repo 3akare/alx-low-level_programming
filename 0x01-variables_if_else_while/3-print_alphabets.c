@@ -18,8 +18,8 @@ int main(void)
 		putchar(alpha);
 
 
-		for (beta = 'A'; beta <= 'Z'; beta++)
-			putchar(beta);
+	for (beta = 'A'; beta <= 'Z'; beta++)
+		putchar(beta);
 
 				
 		putchar('\n');
