@@ -6,7 +6,6 @@
  * Description: 'prints the alphabets in lower and uppercase'
  *
  * Return: Always 0 (Success)
- * 
  */
 int main(void)
 {
