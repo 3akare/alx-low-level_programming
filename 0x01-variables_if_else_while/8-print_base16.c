@@ -13,11 +13,10 @@ int main(void)
 	int hex;
 	char alpha;
 
-	for (hex = 0; hex <= 16; hex++)
+	for (hex = 0; hex <= 9; hex++)
 		putchar(hex);
-		if ((hex % 10) >= 1) 
-			for (alpha = 'a'; alpha <= 'f'; alpha++)
-				putchar(alpha);
+	for (alpha = 'a'; alpha <= 'f'; alpha++)
+		putchar(alpha);
 	putchar('\n');
 	return (0);
 }
