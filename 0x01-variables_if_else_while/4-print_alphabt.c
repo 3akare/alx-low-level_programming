@@ -6,8 +6,9 @@
  *
  * Description: 'print the aplhabet excluding e and q'
  *
- * Retrun: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	char alpha;
