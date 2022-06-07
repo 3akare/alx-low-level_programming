@@ -2,14 +2,14 @@
 #include "main.h"
 
 /**
- * test_islower - a function that return 1 or 0 depending on the value of c
+ * _islower - a function that return 1 or 0 depending on the value of c
  *
  * @c: The character in ASCII code
  *
- * Return: Always 0 (Success)
+ * Return: 1 for lowercase. 0 for the rest
  */
 
-int test_islower(int c)
+int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
 	{
