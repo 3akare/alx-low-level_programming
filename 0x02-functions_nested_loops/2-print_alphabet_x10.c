@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 /**
- * alphabets - prints out the alphabets
+ * print_alphabet - prints out the alphabets
  *
  * Return: Always 0 (Success)
  */
 
-void alphabets(void)
+void print_alphabet(void)
+
 {
 	char alpha;
 	int number;
