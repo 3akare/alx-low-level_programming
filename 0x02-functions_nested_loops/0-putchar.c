@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - print _putchar
@@ -8,13 +9,9 @@
 
 int main(void)
 {
-	int i;
-	char p[] = "_putchar";
+	char str[8] = "_putchar";
 
-	for (i = 0; i < 9; i++)
-	{
-		putchar(p[i]);
-	}
+	printf("%s", str);
 	putchar('\n');
 	return (0);
 }
