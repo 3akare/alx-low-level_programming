@@ -11,6 +11,9 @@
 
 int print_sign(int n)
 {
+	int c;
+	c = (n * -1);
+
         if (n > 0)
         {
                 _putchar(n);
@@ -18,7 +21,7 @@ int print_sign(int n)
         }
         else if (n < 0)
         {
-                _putchar(n *-n);
+                printf("%d", c);
                 return (0);
         }
         else
