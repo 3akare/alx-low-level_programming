@@ -8,6 +8,13 @@
 
 int main(void)
 {
-	putchar("_putchar\n");
+	int i;
+	char p[] = "_putchar";
+
+	for (i = 0; i < 9; i++)
+	{
+		putchar(p[i]);
+	}
+	putchar('\n');
 	return (0);
 }
