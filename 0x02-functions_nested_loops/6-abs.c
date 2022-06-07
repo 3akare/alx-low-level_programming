@@ -9,7 +9,7 @@
  * Return: 1 if its positive and 0 if its negative
  */
 
-int print_sign(int n)
+int _abs(int n)
 {
 	int c;
 	c = (n * -1);
