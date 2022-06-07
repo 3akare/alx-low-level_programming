@@ -19,7 +19,7 @@ int main(void)
 		for (beta = alpha + 1; beta <= 9; beta++)
 		{
 			putchar(alpha + '0');
-			putchar(ones + '0');
+			putchar(beta + '0');
 
 			if (alpha < 8)
 			{
