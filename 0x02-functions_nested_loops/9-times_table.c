@@ -26,12 +26,14 @@ void times_table(void)
 			if (i <= 9)
 			{
 				putchar(32);
-				putchar(u);
+				putchar(u + 48);
 			}
 			else
 			{
-				putchar((u / 10) + 48);
-				putchar((u % 10) + 48);
+				putchar(u / 10);
+				putchar(48);
+				putchar(u % 10);
+				putchar(48);
 			}
 		}
 		putchar('\n');
