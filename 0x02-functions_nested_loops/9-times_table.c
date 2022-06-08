@@ -16,14 +16,24 @@ void times_table(void)
 
 	while (k <= 9)
 	{
-		for (i = 0; i <= 10; i++)
+		_putchar(48);
+		for (i = 0; i <= 9; i++)
 		{
 			int u;
 
 			u = k * i;
-			printf("%d,  ", u);
-			if (i > 9)
-				printf("%d", u);
+			_putchar(44);
+			_putchar(32);
+			if (i <= 9)
+			{
+				_putchar(32);
+				_putchar(u + 48);
+			}
+			else
+			{
+				_putchar((u / 10) + 48);
+				_putchar((u % 10) + 48);
+			}
 		}
 		putchar('\n');
 		k++;
