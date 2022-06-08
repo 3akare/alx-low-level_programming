@@ -22,7 +22,7 @@ void times_table(void)
 
 			u = k * i;
 			printf("%d,  ", u);
-			if (i < 9)
+			if (i > 9)
 				printf("%d", u);
 		}
 		putchar('\n');
