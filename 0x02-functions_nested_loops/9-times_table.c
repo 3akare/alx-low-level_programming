@@ -12,9 +12,9 @@
 void times_table(void)
 {
 	int i;
-	int k = 0;
+	int k;
 
-	while (k <= 9)
+	for (k = 0; k <= 9; k++)
 	{
 		_putchar(48);
 		for (i = 0; i <= 9; i++)
@@ -35,7 +35,6 @@ void times_table(void)
 				_putchar((u % 10) + 48);
 			}
 		}
-		putchar('\n');
-		k++;
+		_putchar('\n');
 	}
 }
