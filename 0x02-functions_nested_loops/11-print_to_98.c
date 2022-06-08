@@ -9,7 +9,7 @@
  * Return: number from c to 98
  */
 
-int print_to_98(int c)
+void print_to_98(int c)
 {
 	c = 0;
 
