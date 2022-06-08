@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
-int times_table(void)
+void times_table(void)
 {
 	int i;
 	int k = 0;
@@ -13,7 +14,7 @@ int times_table(void)
 			int u;
 
 			u = k * i;
-			return (u);
+			printf("%d", u);
 		}
 		k++;
 	}
