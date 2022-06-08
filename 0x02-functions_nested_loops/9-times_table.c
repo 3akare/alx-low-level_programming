@@ -18,4 +18,3 @@ int times_table(void)
 		k++;
 	}
 }
-

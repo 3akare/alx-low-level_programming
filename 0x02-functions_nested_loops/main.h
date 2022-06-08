@@ -7,3 +7,4 @@ int print_sign(int n);
 int _abs(int n);
 int add(int a, int b);
 int print_last_digit(int n);
+int times_table(void);
