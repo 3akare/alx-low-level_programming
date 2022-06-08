@@ -44,6 +44,8 @@ void print_to_98(int c)
 		putchar('\n');
 	}
 	else
+	{
 		printf("%d", c);
 		putchar('\n');
+	}
 }
