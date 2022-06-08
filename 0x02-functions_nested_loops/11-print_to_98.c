@@ -11,18 +11,36 @@
 
 void print_to_98(int c)
 {
-	c = 0;
-
-	while (c <= 98)
+	if (c > 98)
 	{
-		if (c != 98)
+		while (c >= 98)
 		{
-			putchar(c);
-			putchar(44);
-			putchar(32);
+			if (c != 98)
+			{
+				printf("%d", c);
+				putchar(44);
+				putchar(32);
+			}
+			else
+				putchar(c);
+			c--;
 		}
-		else
-			putchar(c);
-		c++;
 	}
+	else if (c < 98)
+	{
+		while (c <= 98)
+		{
+			if (c != 98)
+			{
+				printf("%d", c);
+				putchar(44);
+				putchar(32);
+			}
+			else
+				putchar(c);
+			c++;
+		}
+	}
+	else
+		printf("%d", c);
 }
