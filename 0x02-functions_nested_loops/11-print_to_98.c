@@ -22,9 +22,10 @@ void print_to_98(int c)
 				putchar(32);
 			}
 			else
-				putchar(c);
+				printf("%d", c);
 			c--;
 		}
+		putchar('\n');
 	}
 	else if (c < 98)
 	{
@@ -37,10 +38,12 @@ void print_to_98(int c)
 				putchar(32);
 			}
 			else
-				putchar(c);
+				printf("%d", c);
 			c++;
 		}
+		putchar('\n');
 	}
 	else
 		printf("%d", c);
+		putchar('\n');
 }
