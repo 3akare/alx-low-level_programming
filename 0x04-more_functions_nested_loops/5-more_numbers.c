@@ -16,7 +16,7 @@ void more_numbers(void)
 	while (k < 10)
 	{
 		for (i = 0; i < l; i++)
-			_putchar(i);
+			printf("%d", i);
 		_putchar('\n');
 	_putchar('\n');
 	k++;
