@@ -25,7 +25,7 @@ void times_table(void)
 			putchar(32);
 			if (i <= 9)
 			{
-				if (u > 10)
+				if (u < 10)
 				{
 					putchar(32);
 					printf("%d", u);
