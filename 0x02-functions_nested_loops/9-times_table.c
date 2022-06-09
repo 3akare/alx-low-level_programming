@@ -18,15 +18,20 @@ void times_table(void)
 	for (k = 0; k <= 9; k++)
 	{
 		putchar(48);
-		for (i = 0; i <= 9; i++)
+		for (i = 1; i <= 9; i++)
 		{
 			u = k * i;
 			putchar(44);
 			putchar(32);
 			if (i <= 9)
 			{
-				putchar(32);
-				printf("%d", u);
+				if (u > 10)
+				{
+					putchar(32);
+					printf("%d", u);
+				}
+				else
+					printf("%d", u);
 			}
 			else
 			{
