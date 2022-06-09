@@ -1,5 +1,5 @@
-include <stdio.h>
-include "main.h"
+#include <stdio.h>
+#include "main.h"
 
 /**
  * jack_bauer - a function that prints out the hours in a day
@@ -9,4 +9,18 @@ include "main.h"
   
 void jack_bauer(void)
 {
-    
+       int a, b, c, d;
+  
+       while (b < 6)
+       {
+            for (a = 0; a < 10; a++)
+            {
+                 putchar(a);
+                 if (a > 10)
+                 {
+                      a = 0;
+                      b++;
+                 }
+            }
+       }
+}
