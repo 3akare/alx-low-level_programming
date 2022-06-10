@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - FizzBuzz
  *
- * Description: 'FizzBuzz'
+ * @void: void
  *
  * Return: Always 0 (Success)
  */
