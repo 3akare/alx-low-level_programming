@@ -21,7 +21,7 @@ int main(void)
 		}
 		else if (i % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 			putchar(32);
 		}
 		else if (i % 5 == 0)
