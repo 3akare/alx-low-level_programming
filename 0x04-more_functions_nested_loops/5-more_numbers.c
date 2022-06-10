@@ -19,11 +19,11 @@ void more_numbers(void)
 		{
 			for (i = 0; i < l; i++)
 				printf("%d", i);
-			putchar('\n');
+			_putchar('\n');
 		}
 		else
 			printf("%d", i);
-		putchar('\n');
+		_putchar('\n');
 		k++;
 	}
 }
