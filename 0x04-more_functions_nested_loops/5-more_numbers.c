@@ -15,10 +15,15 @@ void more_numbers(void)
 
 	while (k < 10)
 	{
-		for (i = 0; i < l; i++)
+		if (k != 10)
+		{
+			for (i = 0; i < l; i++)
+				printf("%d", i);
+			putchar('\n');
+		}
+		else
 			printf("%d", i);
 		putchar('\n');
-	putchar('\n');
-	k++;
+		k++;
 	}
 }
