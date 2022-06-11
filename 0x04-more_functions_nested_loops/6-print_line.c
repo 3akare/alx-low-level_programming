@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_line - Draws a striaght line using the - character
- * @n - is an integer
+ * print_line - draws a straight line using the - character
+ * @n: is an integer
  * Return: Always 0
  */
 
