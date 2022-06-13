@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * _puts2 - a functions that prints a string
+ * puts2 - a functions that prints a string
  * @str: a variable
  * Return: Always 0;
  */
 
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int len = 0, index;
 
