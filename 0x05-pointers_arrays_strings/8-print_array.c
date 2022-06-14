@@ -16,8 +16,8 @@ void print_array(int *a, int n)
 		if (1 < (n - 1))
 		{
 			printf("%d", a[i]);
-			_putchar(44);
-			_putchar(32);
+			putchar(44);
+			putchar(32);
 		}
 		else
 			printf("%d", a[i]);
