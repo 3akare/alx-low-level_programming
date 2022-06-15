@@ -1,54 +1,26 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
- * main - password key generator
+ * main - generates random valid passwords
  *
- * Description: 'a program that generates random valid passwords'
- *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 
 int main(void)
 {
-	int i = 0, n = 0;
+	int pass, sum;
 
-	srand((unsigned int) time(NULL));
-	int numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = "!@#$%&";
-	char password[10];
-
-	n = rand() % 4;
-
-	for (i = 0; i < 10; i++)
+	srand(time(NULL));
+	sum = 0;
+	while (sum <= 2645)
 	{
-		if (n == 1)
-		{
-			password[i] = numbers[rand() % 10];
-			n = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (n == 2)
-		{
-			password[i] = letter[rand() % 26];
-			n = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (n == 3)
-		{
-			password[i] = LETTER[rand() % 26];
-			n = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else
-		{
-			password[i] = symbols[rand() % 6];
-			n = rand() % 4;
-			printf("%c", password[i]);
-		}
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
 	}
-	putchar('\n');
+	printf("%c", 2772 - sum);
+
+	return (0);
 }
