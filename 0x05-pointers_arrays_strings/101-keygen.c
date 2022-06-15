@@ -21,6 +21,8 @@ int main(void)
 		printf("%c", pass);
 	}
 	printf("%c", 2772 - sum);
+	pass[0] = '\0';
+	sum[0] = '\0';
 
 	return (0);
 }
