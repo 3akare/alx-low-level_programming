@@ -9,19 +9,12 @@
 
 void reverse_array(int *a, int n)
 {
-	int i;
+	int tmp, index;
 
-	for (i = 1; i < n; i++)
+	for (index = n - 1; index >= n / 2; index--)
 	{
-		if (i != n)
-		{
-			printf("%d", a[n - i]);
-			putchar(44);
-			putchar(32);
-		}
-		else
-			printf("%d", a[n - i]);
+		tmp = a[n - 1 - index];
+		a[n - 1 - index] = a[index];
+		a[index] = tmp;
 	}
-	printf("%d", a[0]);
-	putchar('\n');
 }
