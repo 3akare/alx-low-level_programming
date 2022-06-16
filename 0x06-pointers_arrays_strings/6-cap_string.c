@@ -10,7 +10,7 @@
 
 char *cap_string(char *s)
 {
-	int i, j = 0;
+	int i;
 	int len = strlen(s);
 
 	for (i = 0; i < len; i++)
@@ -21,7 +21,9 @@ char *cap_string(char *s)
 		s[i] == '\t') &&
 		s[i + 1] >= 97 &&
 		s[i + 1] <= 122)
+		{
 			s[i + 1] = s[i + 1] - 32;
+		}
 	}
 	return (s);
 }
