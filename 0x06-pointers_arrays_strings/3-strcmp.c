@@ -13,18 +13,10 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0, j;
-	int output = 0;
-
-	j = strlen(s1) + strlen(s2) + 5;
-
-	for (i = 0; i < j; i++)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		if (s1[i] != s2[i])
-			output++;
+		s1++;
+		s2++;
 	}
-	if (strlen(s2) > strlen(s1))
-		output = -output;
-
-	return (output);
+	return (*s1 - *s2);
 }
