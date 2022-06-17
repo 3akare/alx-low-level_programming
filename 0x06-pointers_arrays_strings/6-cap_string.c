@@ -15,8 +15,8 @@ char *cap_string(char *s)
 
 	for (i = 0; i < len; i++)
 	{
-		if ((s[i] == 32 ||
-		s[i] == 46 ||
+		if ((s[i] == ' ' ||
+		s[i] == '.' ||
 		s[i] == '\n' ||
 		s[i] == '\t' ||
 		s[i] == ',' ||
