@@ -9,10 +9,10 @@
  * Return: Always Success
  */
 
-void *_memset(void *s, char b, unsigned int n)
+char *_memset(void *s, char b, unsigned int n)
 {
 	unsigned int index;
-	unsigned int *memory = s, value = b;
+	unsigned char *memory = s, value = b;
 
 	for (index = 0; index < n; index++)
 		memory[index] = value;
