@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * _memset - a function
@@ -10,7 +9,7 @@
  * Return: Always Success
  */
 
-void *_memset(void *s, char b, size_t n)
+void *_memset(void *s, char b, unsigned int n)
 {
 	unsigned int index;
 	unsigned int *memory = s, value = b;
