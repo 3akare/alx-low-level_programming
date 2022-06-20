@@ -9,7 +9,7 @@
  * Return: Always Success
  */
 
-char *_memset(void *s, char b, unsigned int n)
+void *_memset(void *s, char b, unsigned int n)
 {
 	unsigned int index;
 	unsigned char *memory = s;
