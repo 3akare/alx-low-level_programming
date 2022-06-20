@@ -5,7 +5,3 @@ git add .
 read message
 git commit -m"$message"
 git push
-
-sleep 4
-echo "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"
-echo "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"
