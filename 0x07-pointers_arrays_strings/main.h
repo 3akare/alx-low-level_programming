@@ -1,7 +1,8 @@
+#include <stddef.h>
 #ifndef MAIN_H
 #define MAIN_H
 
-char *_memset(char *s, char b, unsigned int n);
+void *_memset(void *s, char b, size_t n);
 void print_diagums(int *a, int size);
 char *_strpbrk(char *s, char *accept);
 char _putchar(char *c);
