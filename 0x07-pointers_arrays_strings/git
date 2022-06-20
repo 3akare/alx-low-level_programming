@@ -2,6 +2,7 @@
 
 chmod +x *
 git add .
+echo "Enter a commmit message:"
 read message
 git commit -m"$message"
 git push
