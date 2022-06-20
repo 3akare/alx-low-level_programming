@@ -2,6 +2,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void set_string(char **s, char *to);
 void *_memset(void *s, char b, size_t n);
 void print_diagums(int *a, int size);
 char *_strpbrk(char *s, char *accept);
