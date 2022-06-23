@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
+/**
  * factorial - prints  out the factorial of @n
  * @n: an integer
  *
