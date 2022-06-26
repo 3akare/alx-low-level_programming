@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - a function that prints the number of arguments passed into it
+ * main - a function that prints out the number of CLI arguments
  *
- * @argc: count of command line arguments
- * @argv: an array of command line vector
+ * @argc: arguments count
+ * @argv: arguments vector
  *
  * Return: Always Success
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-	(void)(argv);
-	printf("%d", argc - 1);
+	printf("%d\n", argc - 1);
+
+	return (0);
 }
