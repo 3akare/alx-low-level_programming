@@ -25,5 +25,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d", mul);
-	return (0);
+	return (mul);
 }
