@@ -3,6 +3,8 @@
 /**
  * main - A function
  *
+ * @argc: command line arguments count
+ * @argv: an array of the command line arguments
  * Return: Always Success
  */
 
