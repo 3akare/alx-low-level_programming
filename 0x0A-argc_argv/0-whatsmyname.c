@@ -3,7 +3,7 @@
 /**
  * main - a function that prints out its filename
  *
- * @argc: command line arguements count
+ * @argc: command line arguments count
  * @argv: an array of command line vectors
  *
  * Return: Always Success
