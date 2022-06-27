@@ -33,6 +33,6 @@ char *str_concat(char *s1, char *s2)
 	for (index = 0; s2[index]; index++)
 		con_cat[con_index++] = s2[index];
 
-	con_cat[len] = '\0';
+	con_cat[len - 1] = *con_cat;
 	return (con_cat);
 }
