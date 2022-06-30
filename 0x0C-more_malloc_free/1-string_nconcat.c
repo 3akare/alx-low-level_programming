@@ -6,6 +6,7 @@
  * string_nconcat - function that concatenates 2 strings
  * @s1: string one
  * @s2: string two
+ * @n: the lenght of the array
  *
  * Return: Always success
  */
