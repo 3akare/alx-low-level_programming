@@ -1,5 +1,5 @@
-#ifndef __FILE_NAME__
-#define __FILE_NAME__
+#ifndef SUM_H
+#define SUM_H
 
 #define SUM(x,y) ((x) + (y))
 
