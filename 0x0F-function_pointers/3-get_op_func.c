@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - Selects the correect function to perform the operator
+ * get_op_func - Selects the correct function to perform the operator
  * @s: The operator passed as arguemnet.
  *
  * Return: A pointer

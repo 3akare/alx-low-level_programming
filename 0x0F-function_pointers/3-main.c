@@ -6,7 +6,7 @@
  * main - prints the result
  * @argc: th enumber of arguments
  * @argv: an array of pointers
- * 
+ *
  * Return: Always 0
  */
 
@@ -36,7 +36,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	print("%d\n", get_op_func(op)(num1, num2));
+	printf("%d\n", get_op_func(op)(num1, num2));
 
 	return (0);
 }
