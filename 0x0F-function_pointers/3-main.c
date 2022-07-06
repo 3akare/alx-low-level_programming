@@ -6,6 +6,8 @@
  * main - prints the result
  * @argc: th enumber of arguments
  * @argv: an array of pointers
+ * 
+ * Return: Always 0
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
