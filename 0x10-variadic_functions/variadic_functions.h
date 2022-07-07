@@ -1,5 +1,5 @@
-#ifndef VARIADIC_FUNCTION_H
-#define VARIADIC_FUNCTION_H
+#ifndef VARIADIC_FUNCTIONS_H
+#define VARIADIC_FUNCTIONS_H
 
 void prints_numbers(const char *separator, const unsigned int n, ...);
 void prints_strings(const char *separator, const unsigned int n, ...);
