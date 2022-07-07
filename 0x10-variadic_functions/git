@@ -5,6 +5,6 @@ git add .
 echo "Enter a message:"
 read message
 
-git commit -m"message"
+git commit -m"$message"
 
 git push
