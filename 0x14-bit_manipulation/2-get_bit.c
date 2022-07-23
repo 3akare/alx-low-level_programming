@@ -2,6 +2,7 @@
 
 /**
  * get_bit - gets the bit at the given index
+ * @n: an unsigned integer
  * @index: the bit to be gotten
  *
  * Return: Always Successful
