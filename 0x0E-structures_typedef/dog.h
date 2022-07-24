@@ -15,6 +15,8 @@ struct dog
 	char *owner;
 };
 
+typedef struct dog dog_t;
+
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
