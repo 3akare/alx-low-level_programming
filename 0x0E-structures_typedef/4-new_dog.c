@@ -1,4 +1,4 @@
-#include "main.h"
+#include "dog.h"
 
 /**
  * new_dog - Creates a new dog.
@@ -25,9 +25,9 @@ dog_t *new_dog(char *name, float age, char *owner)
                 return (NULL);
         }
 
-        doggo->name = _strcopy(doggo->name, name);
+        doggo->name = strcpy(doggo->name, name);
         doggo->age = age;
-        doggo->owner = _strcopy(doggo->owner, owner);
+        doggo->owner = strcpy(doggo->owner, owner);
 
         return (doggo);
 }
