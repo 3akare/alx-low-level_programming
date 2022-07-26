@@ -10,18 +10,13 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int i = 0, len = 0;
 	FILE *fptr;
 
 	if (filename == NULL)
 		return (-1);
-	else if (text_content == NULL)
-		text_content == "";
-	else
-	{
-		fptr = fopen(filename, "w");
-		fputs(text_content, fptr);
-		fclose(fptr);
-		return (1);
-	}
+
+	fptr = fopen(filename, "w");
+	fputs(text_content, fptr);
+	fclose(fptr);
+	return (1);
 }
