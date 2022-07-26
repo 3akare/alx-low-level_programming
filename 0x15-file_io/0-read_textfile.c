@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fptr;
 	char c;
-	int i = 0;
+	long unsigned int i = 0;
 
 	if (filename == NULL)
 		return (0);
