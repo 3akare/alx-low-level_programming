@@ -20,13 +20,13 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	ptr1 = fopen(argv[1], "r");
-	ptr2 = fopen(argv[2], "w");
 	if (ptr1 == NULL)
 	{
 		printf("Error: Can't read from file %s", argv[1]);
 		exit(98);
 	}
-	else if (ptr2 == NULL)
+	ptr2 = fopen(argv[1], "w");
+	if (ptr2 == NULL)
 	{
 		printf("Error: Can't write to file %s", argv[2]);
 		exit(98);
