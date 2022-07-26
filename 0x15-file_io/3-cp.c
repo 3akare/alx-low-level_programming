@@ -43,12 +43,12 @@ int main(int argc, char **argv)
 	}
 	if (input == EOF)
 	{
-		printf("Error: Can't close fd %d", ptr1);
+		printf("Error: Can't close fd %s", argv[1]);
 		exit(100);
 	}
 	else if (output == EOF)
 	{
-		printf("Error: Can't close fd %d", ptr2);
+		printf("Error: Can't close fd %s", argv[2]);
 		exit(100);
 	}
 }
