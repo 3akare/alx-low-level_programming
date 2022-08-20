@@ -9,8 +9,6 @@
 
 int main(void)
 {
-    typedef unsigned long int long_t;
-    
 	unsigned long int i;
 	unsigned long int j = 1;
 	unsigned long int temp = 1;
