@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
+typedef unsigned long int long_t;
 
 int _putchar(char c);
 void print_alphabet(void);
