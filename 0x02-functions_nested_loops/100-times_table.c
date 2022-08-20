@@ -18,7 +18,7 @@ int print_times_table(int n)
 	for (i = 0; i < n; i++)
 	{
 		putchar(',');
-		printf("%3d", 0);
+		printf("%4d", 0);
 	}
 	putchar('\n');
 	for (j = 1; j < (n + 1); j++)
@@ -27,13 +27,13 @@ int print_times_table(int n)
 		{
 			prod = i * j;
 			if (i == n)
-				printf("%3d", prod);
+				printf("%4d", prod);
 			else
 			{
 				if (prod == 0)
-					printf("%d", prod);
+					printf("%2d", prod);
 				else
-					printf("%3d", prod);
+					printf("%4d", prod);
 				putchar(',');
 			}
 		}
