@@ -10,15 +10,15 @@
 
 int print_times_table(int n)
 {
-	int j = 0;
-	int i = 0;
+	int j;
+	int i;
 
 	if (n > 15 || n < 0)
 		return (0);
 
-	for (j; j <= n; j++)
+	for (j = 0; j <= n; j++)
 	{
-		for (i; i <= n; i++)
+		for (i = 0; i <= n; i++)
 		{
 			if (i == n)
 			{
@@ -28,9 +28,14 @@ int print_times_table(int n)
 			{
 				printf("%2d", i * j);
 				putchar(',');
-				putchar(',');
+				putchar(' ');
 			}
 		}
 		putchar('\n');
 	}
+}
+
+int main(void)
+{
+    print_times_table(4);
 }
