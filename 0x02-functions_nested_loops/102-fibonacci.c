@@ -17,10 +17,16 @@ int main(void)
 
 	for (i = 0, k = 0; k < 50; i++, k++)
 	{
-		printf("%ld\n", temp);
+        if (temp == 20365011074)
+        {
+            printf("%ld", temp);
+            break;
+        }
+		printf("%ld, ", temp);
 		i = j;
 		j = temp;
 		temp = i + j;
 	}
+    putchar('\n');
 	return (0);
 }
