@@ -1,48 +1,41 @@
 #include "main.h"
 
 /**
- * print_times_table - prints the @n times table, starting with
- * 0
+ * print_times_table - prints tha @n times table, starting
+ * with 0
  *
- * @n: an unsigned integer
- * Return: - 1 when n < 15, 0 whne successful
+ * @n: an integer greater than 0 and less than 15
+ * Return: Always Successful
  */
 
 int print_times_table(int n)
 {
-	int j;
-	int i;
+	int i, j, prod;
 
 	if (n > 15 || n < 0)
 		return (0);
-    
-    if (n == 0)
-    {
-        putchar(0 + '0');
-        putchar('\n');
-        return (0);
-    }
-	for (j = 0; j <= n; j++)
+	putchar('0');
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i <= n; i++)
+		putchar(',');
+		printf("%3d", 0);
+	}
+	putchar('\n');
+	for (j = 1; j < (n + 1); j++)
+	{
+		for (i = 0; i < (n + 1); i++)
 		{
-            if (i * j == 0)
-            {
-                putchar(0 + '0');
-            }
+			prod = i * j;
+			if (i == n)
+				printf("%3d", prod);
 			else
-            {
-                if (i == n)
-                {
-                    printf("%3d", i * j);
-                }
-                else
-                {
-                    printf("%3d", i * j);
-                    putchar(',');
-                    putchar(' ');
-                }
-            }
+			{
+				if (prod == 0)
+					printf("%d", prod);
+				else
+					printf("%3d", prod);
+				putchar(',');
+			}
 		}
 		putchar('\n');
 	}
