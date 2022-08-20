@@ -26,16 +26,23 @@ int print_times_table(int n)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			if (i == n)
-			{
-				printf("%3d", i * j);
-			}
+            if (i * j == 0)
+            {
+                putchar(0 + '0');
+            }
 			else
-			{
-				printf("%3d", i * j);
-				putchar(',');
-				putchar(' ');
-			}
+            {
+                if (i == n)
+                {
+                    printf("%3d", i * j);
+                }
+                else
+                {
+                    printf("%3d", i * j);
+                    putchar(',');
+                    putchar(' ');
+                }
+            }
 		}
 		putchar('\n');
 	}
