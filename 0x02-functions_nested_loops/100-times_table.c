@@ -31,7 +31,7 @@ int print_times_table(int n)
 			else
 			{
 				if (prod == 0)
-					printf("%2d", prod);
+					printf("%d", prod);
 				else
 					printf("%4d", prod);
 				putchar(',');
