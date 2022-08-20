@@ -6,21 +6,18 @@
  *
  * Return: Always 0 (Success)
  */
-  
+
+
 void jack_bauer(void)
 {
-       int a, b;
-  
-       while (b < 6)
-       {
-            for (a = 0; a < 10; a++)
-            {
-                 putchar(a);
-                 if (a > 10)
-                 {
-                      a = 0;
-                      b++;
-                 }
-            }
-       }
+	int j, i;
+
+	for (i = 0; i < 24; i++)
+	{
+		for (j = 0; j < 60; j++)
+		{
+			printf("%.2d:%.2d", i, j);
+			putchar('\n');
+		}
+	}
 }
