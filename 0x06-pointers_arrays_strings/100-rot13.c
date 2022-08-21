@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
 /**
  * rot13 - encodes a string using rot13
@@ -12,35 +10,34 @@
 char *rot13(char *str)
 {
 	int i = 0, j;
-	char *ptr;
-	char alpha1[13] = "abcdefghijklm";
-	char alpha2[13] = "nopqrstuvwxyz";
+	char alpha[] = {'A', 'B', 'C', 'D', 'E',
+		'F', 'G', 'H', 'I', 'J', 'K', 'L',
+		'M', 'N', 'O', 'P', 'Q', 'R', 'S',
+		'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+		'a', 'b', 'c', 'd', 'e', 'f', 'g',
+		'h', 'i', 'j', 'k', 'l', 'm', 'n',
+		'o', 'p', 'q', 'r', 's', 't', 'u',
+		'v', 'w', 'x', 'y', 'z'};
+	char rot13[] = {'N', 'O', 'P', 'Q', 'R',
+		'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+		'Z', 'A', 'B', 'C', 'D', 'E', 'F',
+		'G', 'H', 'I', 'J', 'K', 'L', 'M',
+		'n', 'o', 'p', 'q', 'r', 's', 't',
+		'u', 'v', 'w', 'x', 'y', 'z', 'a',
+		'b', 'c', 'd', 'e', 'f', 'g', 'h',
+		'i', 'j', 'k', 'l', 'm'};
 
-	ptr = malloc(strlen(str) * sizeof(char));
-	strcpy(ptr, str);
-
-	while (ptr[i])
+	while (str[i])
 	{
-		for (j = 0; j <= 12; j++)
+		for (j = 0; j < 53; j++)
 		{
-			if (ptr[i] >= 'A' && ptr[i] <= 'Z')
+			if (str[i] == alpha[j])
 			{
-				if (ptr[i] == (alpha1[j] - 32))
-					ptr[i] = (alpha2[j] - 32);
-				else if (ptr[i] == (alpha2[j] - 32))
-					ptr[i] = (alpha1[j] - 32);
-			}
-			else if (ptr[i] >= 'a' && ptr[i] <= 'z')
-			{
-				if (ptr[i] == alpha1[j])
-					ptr[i] = alpha2[j];
-				else if (ptr[i] == alpha2[j])
-					ptr[i] = alpha1[j];
+				str[i] = rot13[j];
+				break;
 			}
 		}
 		i++;
 	}
-	strcpy(str, ptr);
-	free(ptr);
 	return (str);
 }
