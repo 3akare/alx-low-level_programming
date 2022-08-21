@@ -1,10 +1,4 @@
-#include "main.h"
 #include <stdio.h>
-
-/**
- * main - magic.c
- * Return: Always (0)
- */
 
 int main(void)
 {
