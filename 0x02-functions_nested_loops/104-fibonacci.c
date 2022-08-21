@@ -17,7 +17,7 @@ int main(void)
 	for (k = 0; k < 92; k++)
 	{
 		temp = i + j;
-		printf("%lu", temp);
+		printf("%lu, ", temp);
 		i = j;
 		j = temp;
 	}
