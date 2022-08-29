@@ -4,19 +4,19 @@
  * _memset - a function
  * @s: a pointer
  * @b: a character
- * @n: number of bytes to be filled.
+ * @n: number of bytes to be filled
  *
- * Return: Always Success
+ * Return: a character pointer
  */
 
-void *_memset(void *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s;
-	int value = b;
+	int i = 0;
 
-	for (index = 0; index < n; index++)
-		memory[index] = value;
-
-	return (memory);
+	while (i < n)
+	{
+		s[i] = b;
+		i++;
+	}
+	return (s);
 }
