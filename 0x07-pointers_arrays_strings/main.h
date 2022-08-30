@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <stddef.h>
 #include <stdio.h>
+#include <string.h>
 
 void set_string(char **s, char *to);
 char *_memset(char *s, char b, unsigned int n);
