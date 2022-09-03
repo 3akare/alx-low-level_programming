@@ -22,8 +22,8 @@ int _isalpha(int c)
 
 int main(int ac, char *av[])
 {
-	int sum = 0;
-	for (int i = 1; i < ac; i++)
+	int sum = 0, i;
+	for (i = 1; i < ac; i++)
 	{
 		if (_isalpha(*av[i]) == 1 || atoi(av[i]) < 0)
 		{
