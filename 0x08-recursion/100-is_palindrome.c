@@ -43,14 +43,12 @@ int is_palindrome(char *str)
 {
 	int x = 0;
 	int len = strlen(str);
-	int i, j;
+	int i = 0, j = 1;
 
-	for (i = 0, j = 1; i < len; i++, j++)
-	{
-		if (_rev(str, j) == _put(str, i))
-			x++;
-		else
-			return (0);
-	}
+	if (_rev(str, j + 1) == _put(str, i + 1))
+		x++;
+	else
+		return (0);
+
 	return (1);
 }
