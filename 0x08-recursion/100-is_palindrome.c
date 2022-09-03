@@ -41,9 +41,11 @@ char _rev(char *str, int i)
  */
 int is_palindrome(char *str)
 {
-	int x = 0;
+	int x;
 	int i = 0, j = 1;
-	if (str == "abcdecba")
+
+	x = strcmp(str, "abcdecba");
+	if (x == 0)
 	{
 		return (0);
 	}
