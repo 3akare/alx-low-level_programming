@@ -1,33 +1,28 @@
+#include "main.h"
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a new string which is a duplicate
+ * _strdup - duplicates a string
+ * @str: a string
  *
- * @str: the string to be relocated
- *
- * Return: Always Success
+ * Return: a duplicate of @str
  */
 
 char *_strdup(char *str)
 {
-	int index, len = 0;
-	char *newstr;
+	char *s;
+	unsigned int i, len;
 
-	if (str == NULL)
+	len = strlen(str);
+	s = malloc(len * sizeof(char));
+	if (!s)
 		return (NULL);
-
-	for (index = 0; str[index]; index++)
-		len++;
-
-	newstr = malloc((len + 1) * (sizeof(char)));
-
-	if (newstr == NULL)
-		return (NULL);
-
-	for (index = 0; str[index]; index++)
-		newstr[index] = str[index];
-
-	newstr[len] = '\0';
-	return (newstr);
+	for (i = 0; i < len; i++)
+	{
+		s[i] = str[i];
+	}
+	s[i] = '\0';
+	return (s);
 }
