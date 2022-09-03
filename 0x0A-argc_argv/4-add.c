@@ -1,34 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - a function that adds positive numbers
+ * _isalpha - check if @c is an alphabet
+ * @c: an integer
  *
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: Always Success
+ * Return: 1 if success, 0 if fail
  */
 
-int main(int argc, char *argv[])
+int _isalpha(int c)
 {
-	int num, digit, sum = 0;
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+		return (1);
+	else
+		return (0);
+}
 
-	for (num = 1; num < argc; num++)
+/**
+ * main - add all positive CLI arguments
+ * Return: 0 if succesful, and 1 if fail
+ */
+
+int main(int ac, char *av[])
+{
+	int sum = 0;
+	for (int i = 1; i < ac; i++)
 	{
-		for (digit = 0; argv[num][digit]; digit++)
+		if (_isalpha(*av[i]) == 1 || atoi(av[i]) < 0)
 		{
-			if (argv[num][digit] < '0' || argv[num]
-			[digit] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
-
-		sum += atoi(argv[num]);
+		sum += atoi(av[i]);
 	}
 	printf("%d\n", sum);
-
 	return (0);
 }
+
