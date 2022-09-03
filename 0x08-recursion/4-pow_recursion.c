@@ -1,26 +1,23 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _pow_recursion - finds the value of @x to the power of @y
+ * _pow_recursion - returns the value of x raised to the
+ * value
+ * @x: an integer
+ * @y: an integer
  *
- * @x: The number to be raised
- * @y: The power
- *
- * Return: Always Success
+ * Return: exponential value of x
  */
 
 int _pow_recursion(int x, int y)
 {
-	int t = x;
+	int res = x;
 
+	if (y == 0)
+		return (1);
 	if (y < 0)
 		return (-1);
-
-	else if (y == 0)
-		return (1);
-
-	t *= _pow_recursion(x, y - 1);
-
-	return (t);
+	res *= _pow_recursion(x, y - 1);
+	return (res);
 }
