@@ -42,7 +42,6 @@ char _rev(char *str, int i)
 int is_palindrome(char *str)
 {
 	int x = 0;
-	int len = strlen(str);
 	int i = 0, j = 1;
 
 	if (_rev(str, j + 1) == _put(str, i + 1))
