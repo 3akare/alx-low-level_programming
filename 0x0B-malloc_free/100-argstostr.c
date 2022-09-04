@@ -14,6 +14,9 @@ char *argstostr(int ac, char **av)
 	unsigned long int sum = 0, k = 0, i = 1, j;
 	char *str;
 
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
 	while (av[i] != NULL)
 	{
 		sum += strlen(av[i]);
