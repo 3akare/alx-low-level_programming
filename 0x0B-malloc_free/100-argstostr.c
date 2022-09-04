@@ -11,7 +11,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	unsigned long int sum = 0, k = 0, i = 1, j;
+	unsigned long int sum = 0, k = 0, i = 0, j;
 	char *str;
 
 	if (ac == 0 || av == NULL)
@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 		sum += strlen(av[i]);
 		i++;
 	}
-	i = 1;
+	i = 0;
 	str = malloc((sizeof(char) * sum) + (ac + 1));
 	if (!str)
 		return (NULL);
@@ -37,4 +37,18 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 	return (str);
+}
+
+int main(int ac, char *av[])
+{
+    char *s;
+
+    s = argstostr(ac, av);
+    if (s == NULL)
+    {
+        return (1);
+    }
+    printf("%s", s);
+    free(s);
+    return (0);
 }
