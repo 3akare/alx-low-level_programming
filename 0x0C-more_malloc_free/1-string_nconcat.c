@@ -1,42 +1,40 @@
-#include "main.h"
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - function that concatenates 2 strings
- * @s1: string one
- * @s2: string two
- * @n: the lenght of the array
+ * string_nconcat - concatenates 2 strings
+ * @s1: the first string
+ * @s2: the second string
+ * @n: the max length of @s2 that will be allocated
  *
- * Return: Always success
+ * Return: NULL if fail, and a string if success
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *concat;
-	unsigned int len = n, index;
+	int len1, len2, i = 0, index = 0, j = 0;
+	char *str;
 
-	if (s1 == NULL)
+	if (!s1)
 		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	for (index = 0; s1[index]; index++)
-		len++;
-
-	concat = malloc(sizeof(char) * (len + 1));
-
-	if (concat == NULL)
+	if (!s2)
+		s2 == "";
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	str = malloc((len1 + len2 + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
-
-	len = 0;
-
-	for (index = 0; s1[index]; index++)
-		concat[len++] = s1[index];
-	for (index = 0; s2[index] && index < n; index++)
-		concat[len++] = s2[index];
-
-	concat[len] = '\0';
-
-	return (concat);
+	for (i = 0; i < len1; i++)
+	{
+		str[index] = s1[i];
+		index++;
+	}
+	for (j = 0; j < n; j++)
+	{
+		str[index] = s2[j];
+		index++;
+	}
+	str[index] = '\0';
+	return (str);
 }
