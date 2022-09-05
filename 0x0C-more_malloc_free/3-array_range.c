@@ -1,29 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * array_range - Creates an ordered array
  * @min: the first value
  * @max: the last value
  *
- * Return: always Success
+ * Return: Always Success
  */
 
 int *array_range(int min, int max)
 {
-	int len = 0, i;
-	int *array;
+	int *array, index, size;
 
 	if (min > max)
 		return (NULL);
 
-	for (i = min; i <= max; i++)
-		len++;
-	array = malloc(len * sizeof(int) + 1);
-	if (!array)
+	size = max - min + 1;
+
+	array  = malloc(sizeof(int) * size);
+
+	if (array == NULL)
 		return (NULL);
-	for (i = 0; i <= len; i++)
-		array[i] = min++;
+
+	for (index = 0; index < size; index++)
+		array[index] = min++;
+
 	return (array);
 }
