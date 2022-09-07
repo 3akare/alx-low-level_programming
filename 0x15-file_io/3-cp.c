@@ -6,7 +6,7 @@
 
 void exit_code97(void)
 {
-	fprintf(stderr, "Usage: cp file_from file_to\n");
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(EXIT97);
 }
 
@@ -25,7 +25,7 @@ void exit_code98(char *s)
  */
 void exit_code99(char *s)
 {
-	fprintf(stderr, "Error: Can't write to %s\n", s);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
 	exit(EXIT99);
 }
 /**
@@ -40,7 +40,7 @@ void close_file(int open_f)
 	fd = close(open_f);
 	if (fd == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d\n", open_f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", open_f);
 		exit(EXIT100);
 	}
 }
