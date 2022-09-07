@@ -16,7 +16,7 @@ void exit_code97(void)
  */
 void exit_code98(char *s)
 {
-	fprintf(stderr, "Error : Can't read from file %s\n", s);
+	dprintf(STDERR_FILE, "Error : Can't read from file %s\n", s);
 	exit(EXIT98);
 }
 /**
@@ -70,7 +70,7 @@ int main(int ac, char *argv[])
 	if (open1 == -1 || rd == -1)
 		exit_code98(argv[1]);
 
-	open2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	open2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	while (rd > 0)
 	{
