@@ -1,22 +1,25 @@
 #include "main.h"
 
 /**
- * create_file - creates a new file
- * @filename: the name of the new file
- * @text_content: the content of the file
+ * create_file - creates a file
+ * @filename: the filename
+ * @text_content: what should be place in the file
  *
- * Return: Always Success
+ * Return: 1 if success, and -1 if fail
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *fptr;
+	int o, w;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
-
-	fptr = fopen(filename, "w+");
-	fputs(text_content, fptr);
-	fclose(fptr);
+	if (!text_content)
+		text_content = "";
+	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(o, text_content, strlen(text_content) + 1);
+	if (o == -1 || w == -1)
+		return (-1);
+	close(o);
 	return (1);
 }

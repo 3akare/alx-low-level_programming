@@ -1,33 +1,28 @@
 #include "main.h"
 
 /**
- * read_textfile - read a text fie and prints it to the STDOUT
- * @filename: the file to be printed out
- * @letters: the number of letters that should be printed
+ * read_textfile - read a text file and print to the POSTIX
+ * standard output
+ * @filename: the name of the file to be printed
+ * @letters: number of letters to be printed
  *
- * Return: 0 if fails and number of printed charcters when success
+ * Return: the length that was actually printed out
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fptr;
-	char c;
-	unsigned long int i = 0;
+	FILE *file;
+	char buffer[letters];
+	ssize_t o, r, w;
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
 
-	fptr = fopen(filename, "r");
-	if (fptr == NULL)
+	if (o == -1 || r == -1 || w == -1 || r != w)
 		return (0);
-
-	c = fgetc(fptr);
-	while	(c != EOF && i < letters)
-	{
-		putchar(c);
-		c = fgetc(fptr);
-		i++;
-	}
-	fclose(fptr);
-	return (i);
+	close(o);
+	return (w);
 }
