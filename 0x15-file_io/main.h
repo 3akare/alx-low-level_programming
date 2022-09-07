@@ -13,6 +13,7 @@
 #define FAIL -1
 #define EXIT97 97
 #define EXIT98 98
+#define EXIT99 99
 #define EXIT100 100
 
 ssize_t read_textfile(const char *filename, size_t letters);
