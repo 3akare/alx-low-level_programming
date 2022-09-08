@@ -10,9 +10,9 @@ void print_dog(struct dog *d)
 	if (!d)
 		return;
 	if (!d->name)
-		d->name = "(nil)";
+		d->name = strdup("(nil)");
 	if (!d->owner)
-		d->owner = "(nil)";
+		d->owner = strdup("(nil)");
 
 	printf("Name: %s\n", d->name);
 
