@@ -10,16 +10,18 @@ void print_dog(struct dog *d)
 	if (!d)
 		return;
 	if (!d->name)
-		d->name = strdup("Name: (nil)\n");
-	if (!d->owner)
-		d->owner = strdup("Owner: (nil)\n");
+		printf("Name: (nil)\n");
+	else
+		printf("Name: %s\n", d->name);
 
-	printf("Name: %s\n", d->name);
-
-	if (d->age > 0)
+	if (d->age >= 0)
 		printf("Age: %f\n", d->age);
 	else
 		printf("Age: (nil)\n");
 
-	printf("Owner: %s\n", d->owner);
+	if (!d->owner)
+		prinf("Owner: (nil)");
+	else
+		printf("Owner: %s\n", d->owner);
+
 }
