@@ -1,4 +1,4 @@
-#include "old.h"
+#include "dog.h"
 
 /**
  * print_dog - prints out a struct dog
