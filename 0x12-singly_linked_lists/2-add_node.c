@@ -22,6 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (!new->str)
 	{
 		free(new);
+		free(head);
 		fprintf(stderr, "Error\n");
 		return (NULL);
 	}
