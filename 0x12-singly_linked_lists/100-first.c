@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * hare - a function
+ * hare - a function that occurs before the main
+ * function
  * Return: always successful
  */
 
