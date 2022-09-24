@@ -1,38 +1,6 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - returns the number elements of a
- * listint_t list
- * @head: a listint_t list
- * @n: an integer
- * Return: the number of nodes in the list
- */
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
-{
-	listint_t *new, *temp;
-
-	new = malloc(sizeof(listint_t));
-	if (!new)
-	{
-		fprintf(stderr, "Error\n");
-		return (NULL);
-	}
-	new->n = n;
-	new->next = NULL;
-	if (*head == NULL)
-		*head = new;
-	else
-	{
-		temp = *head;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
-	}
-	return (*head);
-}
-
-/**
  * delete_nodeint_at_index - delete node at index of a
  * listint_t list
  * @head: a listint_t list
@@ -42,17 +10,25 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp = NULL;
+	listint_t *temp, *copy = *head;
 	unsigned int idx = 0;
 
-	while (*head != NULL)
+	if (!copy)
+		return (1);
+	if (index == 0)
 	{
-		if (idx == index)
-			*head = (*head)->next;
-		add_nodeint_end(&temp, (*head)->n);
-		*head = (*head)->next;
-		idx++;
+		head = (*head)->next;
+		free(copy);
+		return (1);
 	}
-	*head = temp;
+	for (idx = 0; idx < (index - 1); idx++)
+	{
+		if (copy->next == NULL)
+			return (-1);
+		copy = copy->next;
+	}
+	temp = copy->next;
+	copy->next = temp->next;
+	free(temp);
 	return (1);
 }
