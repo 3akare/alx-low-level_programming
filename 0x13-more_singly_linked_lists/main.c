@@ -1,71 +1,5 @@
 #include "lists.h"
 
-/*
-// typedef struct list
-// {
-// 	int number;
-// 	struct list *next;
-// } list_t;
-
-// void print_list(list_t *head)
-// {
-// 	while (head != NULL)
-// 	{
-// 		printf("%d\n", head->number);
-// 		head = head->next;
-// 	}
-// }
-// void free_list(list_t *head)
-// {
-// 	list_t *temp;
-
-// 	while (head != NULL)
-// 	{
-// 		temp = head->next;
-// 		free(head);
-// 		head = temp;
-// 	}
-
-// }
-
-
-
-// void delete_node(list_t **head, unsigned int index)
-// {
-// 	list_t *temp;
-// 	unsigned int idx = 0;
-// 	temp = malloc(sizeof(list_t));
-// 	temp = *head;
-	
-// 	while (temp != NULL)
-// 	{
-// 		if (idx == index)
-// 		{
-// 			printf("%d\n", temp->number);
-// 			break;
-// 		}
-// 		temp = temp->next;
-// 		idx++;
-// 	}
-// }
-
-// list_t *reverse_list(list_t *head, int index)
-// {
-// 	list_t *del_head = NULL;
-// 	int idx;
-
-// 	while (head != NULL)
-// 	{
-// 		if (idx == index)
-// 			head = head->next;
-// 		add_node(&del_head, head->number);
-// 		head = head->next;
-// 		idx++;
-// 	}	
-
-// 	return (del_head);
-// }
-*/
 
 int main(void)
 {
@@ -81,32 +15,8 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
-	printf("-----------------\n");
-	delete_nodeint_at_index(&head, 5);
-	print_listint(head);
-    printf("-----------------\n");
-	delete_nodeint_at_index(&head, 0);
-	print_listint(head);
-    printf("-----------------\n");
-	delete_nodeint_at_index(&head, 0);
-	print_listint(head);
-    printf("-----------------\n");
-	delete_nodeint_at_index(&head, 0);
-	print_listint(head);
-    printf("-----------------\n");
-	delete_nodeint_at_index(&head, 0);
-	print_listint(head);
-    printf("-----------------\n");
+    reverse_listint(&head);
+    print_listint(head);    
+    free_listint2(&head);
     return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
