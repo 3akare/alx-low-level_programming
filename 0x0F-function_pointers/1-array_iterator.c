@@ -8,13 +8,14 @@
  * @action: a pointer
  */
 
-void array_iterator(int *array, size_t size, void (*action)(int))
+void array_iterator(int *array, size_t size, void(*action)(int))
 {
-	if (array == NULL || action == NULL)
+	int i = 0;
+
+	if (!array || !action)
 		return;
-	while (size-- > 0)
+	for (i = 0; i < size; i++)
 	{
-		action(*array);
-		array++;
+		action(i);
 	}
 }
