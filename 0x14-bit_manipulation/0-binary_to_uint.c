@@ -9,11 +9,14 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int len = strlen(b) - 1;
+	int len = 0;
 	int i = 0, sum = 0;
 
 	if (!b)
 		return (0);
+
+	len = strlen(b) - 1;
+
 	while (b[i] != '\0')
 	{
 		if (b[i] == '0' || b[i] == '1')
@@ -34,4 +37,9 @@ unsigned int binary_to_uint(const char *b)
 		i++;
 	}
 	return (sum);
+}
+
+int main(void)
+{
+	printf("%d\n", binary_to_uint("101"));
 }
