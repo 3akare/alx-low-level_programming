@@ -15,7 +15,7 @@ This repository contains programs written for the low-level programming and algo
 - [0x12.C-Singly linked list](./0x12-singly_linked_lists)
 - [0x13.C-More singly linked list](./0x13-more_singly_linked_lists)
 - [0x14.C-Bit manipulation](./0x14-bit_manipulation)
-- [0x15.C-file i/o](./0x15-file_io)
+- [0x15.C-file I/O](./0x15-file_io)
 - [0x0A.C-argc argv](./0x0A-argc_argv)
 - [0x0B.C-Memory management](./0x0B-malloc_free/)
 - [0x0C.C-More memory management](./0x0C-more_malloc_free)
