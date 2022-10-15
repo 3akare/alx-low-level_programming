@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
  * hash_table_print - prints a hash table
- * @ht: A hahs table
+ * @ht: A hash table
  */
 
 void hash_table_print(const hash_table_t *ht)
@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 			node = ht->array[i];
 			while (node != NULL)
 			{
-				printf("'%s':'%s'", node->key, node->value);
+				printf("'%s': '%s'", node->key, node->value);
 				node = node->next;
 				if (node != NULL)
 					printf(", ");
