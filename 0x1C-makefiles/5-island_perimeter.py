@@ -12,10 +12,10 @@ def island_perimeter(grid):
         while idx2 <= j:
             if grid[idx1][idx2] == 1:
                 size += 1
-            if grid[idx1][idx2] == 1 and grid[idx1][idx2 - 1] == 1:
-                side += 1
-            if grid[idx1][idx2] == 1 and grid[idx1 - 1][idx2] == 1:
-                side += 1
+                if idx2 > 0 and grid[idx1][idx2 - 1] == 1:
+                    side += 1
+                if idx1 > 0 and grid[idx1 - 1][idx2] == 1:
+                    side += 1
             idx2 += 1
         idx2 = 0
         idx1 += 1
