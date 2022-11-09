@@ -25,3 +25,4 @@ This repository contains programs written for the low-level programming and algo
 - [0x17.C-Doubly linked list](./0x17-doubly_linked_lists/)
 - [0x18.C-Dynamic Libraries](./0x18-dynamic_libraries/)
 - [0x1A.C-Hash Tables](./0x1A-hash_tables)
+- [0x1C.Makefiles](./0x1C-makefiles)
