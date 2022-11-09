@@ -1,0 +1,6 @@
+all: school.o main.o
+	cc school.o main.o -o school
+
+school.o: school.c
+	cc -c school.c -o school.o
+	cc -c main.c -o main.o
