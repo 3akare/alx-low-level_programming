@@ -1,4 +1,4 @@
-#include "main.h"
+#include "search_algos.h"
 /**
  * linear_search - Searches for a vlaue in an array of integers
  * using the Linear search algorithm
